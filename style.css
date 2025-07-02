@@ -1,41 +1,36 @@
 /* style.css */
-* {
-  box-sizing: border-box;
+html, body {
+  height: 100%;
   margin: 0;
-  padding: 0;
 }
 
 body {
-  font-family: "Segoe UI", Tahoma, sans-serif;
-  background-color: #00843D; /* Fundo verde IFSC */
-  color: #333;
+  background-color: #00843D;
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
-  padding: 1rem;
+  font-family: "Segoe UI", Tahoma, sans-serif;
 }
 
 main {
   background: #fff;
-  padding: 2rem;
+  padding: 1.5rem;
   border-radius: 8px;
   width: 100%;
   max-width: 360px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* Logo no topo do card */
 #logo {
   display: block;
-  width: 120px;
   margin: 0 auto 1rem;
+  width: 120px;
 }
 
 h1 {
+  text-align: center;
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  text-align: center;
 }
 
 section h2 {
@@ -45,8 +40,8 @@ section h2 {
 }
 
 label {
-  margin-top: 0.5rem;
   display: block;
+  margin-top: 0.5rem;
 }
 
 input[type="number"] {
@@ -58,9 +53,9 @@ input[type="number"] {
 }
 
 button {
-  margin-top: 1rem;
   width: 100%;
   padding: 0.75rem;
+  margin-top: 1rem;
   background-color: #0066cc;
   color: #fff;
   border: none;
@@ -73,10 +68,13 @@ button:hover {
   background-color: #005bb5;
 }
 
-#resultado {
-  margin-top: 0.5rem;
+/* Estilo de resultados */
+.resultado {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: #e6f4ea; /* leve fundo verde claro */
+  border-radius: 4px;
+  color: #004b26; /* texto verde escuro */
   font-weight: bold;
-  min-height: 2em;
   text-align: center;
-  /* mantém texto padrão preto para contraste */
 }
