@@ -69,6 +69,6 @@ button:hover {
 #resultado {
   margin-top: 0.5rem;
   font-weight: bold;
-  min-height: 1.5em;
+  min-height: 2em;
   text-align: center;
 }
