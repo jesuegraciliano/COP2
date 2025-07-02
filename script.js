@@ -1,28 +1,74 @@
-/* script.js */
-document.getElementById('btnCalcular').addEventListener('click', function() {
-  const h1 = parseFloat(document.getElementById('h1').value);
-  const h4 = parseFloat(document.getElementById('h4').value);
-  const h2 = parseFloat(document.getElementById('h2').value);
-  const m  = parseFloat(document.getElementById('m').value);
-  const resultadoEl = document.getElementById('resultado');
+/* style.css */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  // Cálculo do efeito frigorífico (qL) e trabalho de compressão (W)
-  const qL = h1 - h4;
-  const W  = h2 - h1;
+body {
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+}
 
-  // Validação dos valores
-  if (isNaN(qL) || isNaN(W) || isNaN(m) || W <= 0 || m <= 0) {
-    resultadoEl.textContent = 'Por favor, verifique os valores inseridos.';
-    return;
-  }
+main {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 360px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
 
-  // Cálculos finais
-  const cop = qL / W;
-  const Qe  = m * qL; // Potência frigorífica (kW)
-  const Wc  = m * W;  // Potência de compressão (kW)
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
 
-  resultadoEl.innerHTML =
-    `COP = (${h1.toFixed(2)} – ${h4.toFixed(2)}) / (${h2.toFixed(2)} – ${h1.toFixed(2)}) ≈ ${cop.toFixed(2)}<br>` +
-    `Potência frigorífica: ${Qe.toFixed(2)} kW<br>` +
-    `Potência de compressão: ${Wc.toFixed(2)} kW`;
-});
+section h2 {
+  font-size: 1.2rem;
+  margin: 1rem 0 0.5rem;
+  color: #0066cc;
+}
+
+label {
+  margin-top: 0.5rem;
+  display: block;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 0.5rem;
+  margin-top: 0.25rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #0066cc;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+button:hover {
+  background-color: #005bb5;
+}
+
+#resultado {
+  margin-top: 0.5rem;
+  font-weight: bold;
+  min-height: 1.5em;
+  text-align: center;
+}
