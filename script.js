@@ -19,7 +19,7 @@ document.getElementById('btnCalcular').addEventListener('click', function() {
   // Cálculos finais
   const cop = qL / W;
   const Qe  = m * qL; // Potência frigorífica (kW)
-  const Wc  = m * W;  // Potência de compressão (kW)
+  const Wc  = m * W;  // Potência compressão (kW)
 
   resultadoEl.innerHTML =
     `<p>COP = (${h1.toFixed(2)} – ${h4.toFixed(2)}) / (${h2.toFixed(2)} – ${h1.toFixed(2)}) ≈ <strong>${cop.toFixed(2)}</strong></p>` +
